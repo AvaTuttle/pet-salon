@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+}
+
+/*header*/
+
+.site-init{
+    background-color: #ffcc00;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-two-collumn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
