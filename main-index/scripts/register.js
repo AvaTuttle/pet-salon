@@ -1,34 +1,35 @@
-console.log("register.js")
 let pets =[];
-//create pets
-let pet1 = {
-    name:"scooby",
-    age:4,
-    gender:"Male",
-    Service:false,
-    Breed:"Choocolate Labrador"
-}
-let pet2 = {
-    name:"Miley",
-    age:7,
-    gender:"Female",
-    service:true,
-    Breed:"Pomeranian"
+
+function Pet(type, breed,name, age, gender, service){
+    this.type=type;
+    this.breed=breed;
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.service=service;
 }
 
-let pet3 = {
-    name:"Sir Grunge McAllister",
-    age:12,
-    gender:"Male",
-    Service:false,
-    Breed:"Dachshound"
+function register(){
+    let inputType = document.getElementById("txtType").value;
+    let inputBreed = document.getElementById("txtBreed").value;
+    let inputName = document.getElementById("txtName").value;
+    let inputAge = document.getElementById("txtAge").value;
+    let inputGender = document.getElementById("txtGender").value;
+    let inputServices = document.getElementById("txtServices").value;
+    
+    let newPet = new Pet (inputType,inputBreed,inputName,inputAge,inputGender,inputServices)
+    console.log(newPet);
+    pets.push(newPet);
 }
 
-pets.push(pet1, pet2, pet3)
+function init(){
+    console.log("init");
+    let pet1 = new Pet("dog", "scooby", 9, "male", "Grooming")
+    let pet2 = new Pet("dog", "Miley", 4, "female", "nails")
+    let pet3 = new Pet("cat", "Sir Grunge McAllister", 13, "male", "bathing")
+    pets.push(pet1,pet2,pet3)
+    console.log(pets)
 
-function displayNames(){
-    document.body.innerHTML = "";
-    for (let i = 0; i < pets.length; i++) {
-        document.write(pets[i].name + "<br>");        
-    }
 }
+
+window.onload=init;
