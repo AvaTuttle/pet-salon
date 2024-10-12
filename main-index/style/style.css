@@ -11,6 +11,13 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+.reg-init{
+    background-color:rgb(168, 198, 134);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .nav-bar{
     display: flex;
