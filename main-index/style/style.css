@@ -113,3 +113,32 @@ select {
     display: flex;
     justify-content: end;
 }
+#pets{
+    display: grid;
+    grid-template-columns: repeat(3.1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.pet{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.grooming{
+    background-color: rgb(127, 127, 255);
+}
+.vaccines{
+    background-color: rgb(133, 255, 133);
+}
+.nails{
+    background-color: rgb(255, 120, 255);
+}
+.bathing{
+    background-color: rgb(255, 122, 144);
+}
+
+/*temp tools*/
+.hidden{
+    display: none;
+}
