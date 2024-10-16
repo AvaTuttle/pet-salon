@@ -34,9 +34,11 @@ function displayTable() {
             <td>${pet.age}</td>
             <td>${pet.gender}</td>
             <td>${pet.service}</td>
+            <td><button class="btn btn-delete" onclick="deletePet(${i})">Delete</button></td>
         </tr>
         `;
     }
-    document.getElementById("petTableBody").innerHTML =row; 
+    document.getElementById("petTableBody").innerHTML = row;
 }
+
 
