@@ -1,6 +1,4 @@
 
-
-
 function Service(title, price){
     this.title=title;
     this.price=price;
@@ -38,24 +36,36 @@ function register(){
     let inputTitle=$("#txtTitle").val();
     let inputPrice=$("#txtPrice").val();
 
-    // console.log("Title:"+inputTitle);
-    // console.log("Price:"+inputPrice);
     let newService = new Service(inputTitle, inputPrice);
     console.log("is valid? ", isValid(newService));
 
     if(isValid(newService)){
         console.log(newService);
+        clearPage();
     }
 
 }
 
 function init(){
     $("#btnRegister").click(register);
-    $( "#txtPrice" ).on("keypress", function(event){
-        if(event.which ==13)
-{
+    $("#btnClear").click(clearPage);
+
+    $("#txtPrice").on("keypress", function(event){
+        if(event.which == 13){ 
+            register();
         }
     });
 }
+function clearPage(){
+    $("#txtTitle").val("");
+    $("#txtPrice").val("");
+
+    $("#txtTitle").removeClass("error");
+    $("#txtPrice").removeClass("error");
+    $(".titleValidationMsg").hide();
+    $(".priceValidationMsg").hide();
+    console.log("page cleared");
+}
+
 
 window.onload=init;
