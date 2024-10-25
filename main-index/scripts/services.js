@@ -30,8 +30,6 @@ function isValid(service){
     return isValidPrice && isValidTitle;
 }
 
-
-
 function register(){
     let inputTitle=$("#txtTitle").val();
     let inputPrice=$("#txtPrice").val();
@@ -41,9 +39,9 @@ function register(){
 
     if(isValid(newService)){
         console.log(newService);
+        save(newService);
         clearPage();
     }
-
 }
 
 function init(){
@@ -56,6 +54,7 @@ function init(){
         }
     });
 }
+
 function clearPage(){
     $("#txtTitle").val("");
     $("#txtPrice").val("");

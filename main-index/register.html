@@ -17,7 +17,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
-            <a href="/services.html">Service</a>
+            <a href="/services.html">Services</a>
         </nav>
     </div>
     <main class="container">
@@ -58,14 +58,12 @@
                     <label>Services:</label>
                     <select id="txtServices">
                         <option value="" disabled selected>-- Select an Option --</option>
-                        <option value="grooming">Grooming</option>
-                        <option value="nails">Nails</option>
-                        <option value="vaccines">Vaccines</option>
-                        <option value="bathing">Bathing</option>
+                    
                     </select>
                 </div>
                 <div class="reg-btn">
-                    <button onclick="register()" class="btn btn-secondary">Register</button>
+                    <button id="btnRegister" class="btn btn-secondary">Register</button>
+
                 </div>
             </fieldset>
         </div>
@@ -97,7 +95,9 @@
         
 
     </main>
+    <script src="/plugins/jquery3.7.1.js"></script>
     <script src="/main-index/scripts/register.js"></script>
     <script src="/main-index/scripts/display.js"></script>
+    <script src="/main-index/scripts/storageManager.js"></script>
 </body>
 </html>

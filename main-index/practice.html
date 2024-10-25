@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/main-index/scripts/practice.js"></script>
     <title>Document</title>
+    <script src="/plugins/jquery3.7.1.js"></script> <!-- Load jQuery -->
+    <script src="/main-index/scripts/practice.js"></script> <!-- Load your script once -->
 </head>
 <body>
-    
-    <script src="/main-index/scripts/register.js"></script>
+
+<form> 
+    <label for="category">Category:</label>
+    <select id="category"> 
+        <option value="">Select Category</option>
+        <option value="fruits">Fruits</option> 
+        <option value="vegetables">Vegetables</option> 
+    </select> 
+    <label for="items">Items:</label> 
+    <select id="items"> 
+        <option value="">Select an Item</option> 
+    </select> 
+</form>
+
 </body>
 </html>

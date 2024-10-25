@@ -51,21 +51,32 @@ function register(){
         pets.push(newPet);
         displayTotals();
         //displayCards(); 
-        displayTable();//displayTable()
+        displayTable();
     }
+}
+
+function getServices(){
+    let services = read(); //in storageManager
+    let option ="";
+    for(let i=0;i<services.length;i++){
+        let service = services[i];
+        option=`<option value="${service.title}"">${service.title}</option>`
+    }
+    $("#txtServices").append(option);
 }
 
 function init(){
     console.log("init");
     let pet1 = new Pet("dog", "dalmation","scooby", 9, "male", "grooming");
     let pet2 = new Pet("dog", "Poodle", "Miley", 4, "female", "nails");
-    let pet3 = new Pet("cat", "domestic Long Hair", "Sir Grunge McAllister", 13, "male", "bathing");
+    let pet3 = new Pet("cat", "Domestic Long Hair", "Sir Grunge McAllister", 13, "male", "bathing");
     pets.push(pet1,pet2,pet3);
     console.log(pets);
 
     document.getElementById("btnRegister").addEventListener("click", register);
     displayTotals();
     displayTable();
+    getServices();
 }
 
 function deletePet(index) {
